@@ -1,17 +1,15 @@
 # terraform-workspace
 Contains independent works on terraform
 
-###steps
 install terraform using brew install
 
-go to https://app.terraform.io/
-login with github url
-go to settings -?> variable sets
-add aws key id and aws secret access key
-to all workspaces.
+go to https://app.terraform.io/ - 
+login with github url - 
+go to settings -> variable sets - environment variables- 
+add aws key id and aws secret access key, to all workspaces.
 
-go to registry.terraform.io
-search for aws modules
+go to registry.terraform.io - 
+search for aws modules - 
 start using it in the terraform files
 
 use terraform login -> generate the api token
