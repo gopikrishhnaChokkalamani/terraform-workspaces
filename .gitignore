@@ -19,3 +19,5 @@ override.tf.json
 .idea
 *.iml
 
+/shelf/
+/workspace.xml
