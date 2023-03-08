@@ -1,7 +1,7 @@
 # terraform-workspace
 Contains independent works on terraform
 
-install terraform using brew install
+* install terraform using brew install
 
 * go to https://app.terraform.io/ - 
 * login with github url - 
