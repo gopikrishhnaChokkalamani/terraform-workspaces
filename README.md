@@ -1,4 +1,4 @@
-# terraform-Workspace
+# terraform-workspace
 Contains independent works on terraform
 
 ###steps
