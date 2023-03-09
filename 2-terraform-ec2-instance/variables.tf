@@ -19,4 +19,3 @@ variable "security_grp_name" {
   description = "Security Group Name"
   default = "web-server-sg"
 }
-
