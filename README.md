@@ -19,3 +19,6 @@ Contains independent works on terraform
 * terraform plan - runs a plan and shows the expected infra change
 * terraform apply - runs and starts provisioning on the AWS console
 
+* follow by order, every workspace module will keep appending the 
+features explored in the previous module
+
