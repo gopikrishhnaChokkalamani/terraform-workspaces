@@ -1,4 +1,8 @@
 # terraform-workspace
+
+*** follow by order, every workspace module will keep appending the
+  features explored in the previous module
+
 Contains independent works on terraform
 
 * install terraform using brew install
@@ -18,7 +22,4 @@ Contains independent works on terraform
 * terraform validate - validates the terraform files
 * terraform plan - runs a plan and shows the expected infra change
 * terraform apply - runs and starts provisioning on the AWS console
-
-* follow by order, every workspace module will keep appending the 
-features explored in the previous module
 
