@@ -1,0 +1,35 @@
+terraform version
+see terraform version
+
+terraform -chdir=<path to .tf file> <followed by other sub commands>
+
+terraform init
+initialize the directory, safe to run multiple times
+
+terraform plan
+creates an execution plan
+
+terraform plan -out <plan_file>
+to save the deployment plan output to file
+
+terraform plan -destroy
+output of the destroy plan.
+if the resource is already created, then it will give the destroy plan, else empty
+
+terraform apply
+apply the changes
+
+terraform apply <plan_file>
+if you want to use the plan that u saved in a file to use in the apply, without the need to do a plan again
+
+terraform apply -target=<resource_name>
+if you want to apply changes only for a resource and not the entire infrastructure
+
+terraform apply -var my_variable=<variable>
+pass variable to .tf file via command line
+
+terraform destroy
+destroy any infra build using terraform
+
+terraform providers
+get providers info used in the configuration
