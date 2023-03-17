@@ -4,10 +4,12 @@ see terraform version
 terraform -chdir=<path to .tf file> <followed by other sub commands>
 
 terraform init
-initialize the directory, safe to run multiple times
+intiialize the directory, safe to run multiple times
 
 terraform plan
 creates an execution plan
+plan will try to interact with the provider, if the provider is not running or not there or incorrect creds, it will error out
+for example if you do a docker provider, and no docker installed in local machine, plan will fail to run
 
 terraform plan -out <plan_file>
 to save the deployment plan output to file
