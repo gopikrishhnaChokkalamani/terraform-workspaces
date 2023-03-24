@@ -14,16 +14,19 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = var.region
+}
+
 variable "region" {
   description = "AWS region"
   default = "us-east-1"
 }
 
-provider "aws" {
-  region = var.region
-}
-
 resource "aws_instance" "dev" {
   ami = "ami-006dcf34c09e50022"
   instance_type = "t3.micro"
+  tags = {
+    Name = "terraform-instance-ec2"
+  }
 }
