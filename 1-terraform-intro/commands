@@ -35,3 +35,20 @@ destroy any infra build using terraform
 
 terraform providers
 get providers info used in the configuration
+
+
+############################################################
+app.terraform.io - terraform cloud
+create an org and set variable set
+follow - https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login
+
+terraform login
+get token and apply in cli
+
+add this to terraform block
+cloud {
+    organization = "<ORG NAME>"
+    workspaces {
+      name = "<WORKSPACE NAME>"
+    }
+  }
