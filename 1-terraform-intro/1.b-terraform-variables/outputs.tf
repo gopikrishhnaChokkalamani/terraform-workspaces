@@ -33,3 +33,8 @@ output "terraform_tfvars_variable" {
 output "global_variable" {
   value = var.global_variable
 }
+
+output "testing_output_sensitive" {
+  value = var.testing_output_sensitive
+  sensitive = true
+}

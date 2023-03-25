@@ -36,8 +36,16 @@ variable "docker_ports" {
       external = 8300
       protocol = "tcp"
     }]
+  //if you add sensitive here and did not add in output
+  //it will error out
+  //sensitive = true
 }
 
 //variable "tfvars_variable" {}
 variable "terraform_tfvars_variable" {}
 variable "global_variable" {}
+
+variable "testing_output_sensitive" {
+  type = string
+  default = "testing_output_sensitive"
+}
