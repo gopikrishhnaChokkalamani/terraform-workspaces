@@ -1,0 +1,54 @@
+terraform version
+see terraform version
+
+terraform -chdir=<path to .tf file> <followed by other sub commands>
+
+terraform init
+intiialize the directory, safe to run multiple times
+
+terraform plan
+creates an execution plan
+plan will try to interact with the provider, if the provider is not running or not there or incorrect creds, it will error out
+for example if you do a docker provider, and no docker installed in local machine, plan will fail to run
+
+terraform plan -out <plan_file>
+to save the deployment plan output to file
+
+terraform plan -destroy
+output of the destroy plan.
+if the resource is already created, then it will give the destroy plan, else empty
+
+terraform apply
+apply the changes
+
+terraform apply <plan_file>
+if you want to use the plan that u saved in a file to use in the apply, without the need to do a plan again
+
+terraform apply -target=<resource_name>
+if you want to apply changes only for a resource and not the entire infrastructure
+
+terraform apply -var my_variable=<variable>
+pass variable to .tf file via command line
+
+terraform destroy
+destroy any infra build using terraform
+
+terraform providers
+get providers info used in the configuration
+
+
+############################################################
+app.terraform.io - terraform cloud
+create an org and set variable set
+follow - https://developer.hashicorp.com/terraform/tutorials/cloud-get-started/cloud-login
+
+terraform login
+get token and apply in cli
+
+add this to terraform block
+cloud {
+    organization = "<ORG NAME>"
+    workspaces {
+      name = "<WORKSPACE NAME>"
+    }
+  }
