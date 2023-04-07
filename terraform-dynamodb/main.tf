@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 0.14.0"
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 4.57.1"
     }
   }
@@ -13,8 +13,8 @@ provider "aws" {
 }
 
 module "dynamodb_table" {
-  source = "terraform-aws-modules/dynamodb-table/aws"
-  name = "my-table"
+  source   = "terraform-aws-modules/dynamodb-table/aws"
+  name     = "my-table"
   hash_key = "id"
   attributes = [
     {
@@ -27,9 +27,9 @@ module "dynamodb_table" {
     }
   ]
   tags = {
-    Terraform = "true"
+    Terraform   = "true"
     Environment = "staging"
   }
   point_in_time_recovery_enabled = true
-  range_key = "name"
+  range_key                      = "name"
 }
