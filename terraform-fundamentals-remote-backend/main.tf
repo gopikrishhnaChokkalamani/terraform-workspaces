@@ -20,7 +20,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "cgk-personal"
     workspaces {
-      name = "terraform-simple-ec2-resource"
+      name = "terraform-remote-backend-example"
     }
   }
 }
