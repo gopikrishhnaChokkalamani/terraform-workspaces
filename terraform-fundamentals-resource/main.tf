@@ -30,9 +30,25 @@ variable "region" {
 //}
 
 resource "aws_instance" "dev" {
-  ami = "ami-006dcf34c09e50022"
+  //ami = "ami-006dcf34c09e50022"
+  ami = var.image_id
   instance_type = "t3.micro"
   tags = {
     Name = "terraform-instance-ec2"
   }
+  provisioner "local-exec" {
+    when = destroy
+    command = "echo 'Destroy-time provisioner'"
+  }
 }
+
+variable "image_id" {
+  type = string
+  description = "image id"
+  validation {
+    condition = length(var.image_id) > 4 && substr(var.image_id, 0, 4) == "ami-"
+    error_message = "image id should be a valid ami id, starting with ami-"
+  }
+}
+
+//terraform plan -var='image_id=ami-006dcf34c09e50022'

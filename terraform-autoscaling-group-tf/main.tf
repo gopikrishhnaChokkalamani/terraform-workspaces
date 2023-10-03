@@ -77,8 +77,8 @@ module "alb" {
   target_groups = [
     {
       name             = "alb-target-group"
-      backend_protocol = "HTTP"
-      backend_port     = 80
+      backend_protocol = "HTTPS"
+      backend_port     = 443
       target_type      = "instance"
       health_check = {
         enabled             = true
@@ -88,7 +88,7 @@ module "alb" {
         healthy_threshold   = 3
         unhealthy_threshold = 3
         timeout             = 6
-        protocol            = "HTTP"
+        protocol            = "HTTPS"
         matcher             = "200"
       }
     }
